@@ -1,0 +1,558 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CCCD77C1ED8A8A100D05E64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD77B1ED8A8A100D05E64 /* main.m */; };
+		2CCCD77F1ED8A8A100D05E64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD77E1ED8A8A100D05E64 /* AppDelegate.m */; };
+		2CCCD7821ED8A8A100D05E64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD7811ED8A8A100D05E64 /* ViewController.m */; };
+		2CCCD7851ED8A8A100D05E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCCD7831ED8A8A100D05E64 /* Main.storyboard */; };
+		2CCCD7881ED8A8A100D05E64 /* NetFlixS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD7861ED8A8A100D05E64 /* NetFlixS.xcdatamodeld */; };
+		2CCCD78A1ED8A8A100D05E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CCCD7891ED8A8A100D05E64 /* Assets.xcassets */; };
+		2CCCD78D1ED8A8A100D05E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CCCD78B1ED8A8A100D05E64 /* LaunchScreen.storyboard */; };
+		2CCCD7981ED8A8A100D05E64 /* NetFlixSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD7971ED8A8A100D05E64 /* NetFlixSTests.m */; };
+		2CCCD7A31ED8A8A100D05E64 /* NetFlixSUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD7A21ED8A8A100D05E64 /* NetFlixSUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CCCD7941ED8A8A100D05E64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CCCD76F1ED8A8A100D05E64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CCCD7761ED8A8A100D05E64;
+			remoteInfo = NetFlixS;
+		};
+		2CCCD79F1ED8A8A100D05E64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CCCD76F1ED8A8A100D05E64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CCCD7761ED8A8A100D05E64;
+			remoteInfo = NetFlixS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CCCD7771ED8A8A100D05E64 /* NetFlixS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetFlixS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CCCD77B1ED8A8A100D05E64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2CCCD77D1ED8A8A100D05E64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2CCCD77E1ED8A8A100D05E64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2CCCD7801ED8A8A100D05E64 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		2CCCD7811ED8A8A100D05E64 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		2CCCD7841ED8A8A100D05E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CCCD7871ED8A8A100D05E64 /* NetFlixS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetFlixS.xcdatamodel; sourceTree = "<group>"; };
+		2CCCD7891ED8A8A100D05E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CCCD78C1ED8A8A100D05E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CCCD78E1ED8A8A100D05E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCCD7931ED8A8A100D05E64 /* NetFlixSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetFlixSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CCCD7971ED8A8A100D05E64 /* NetFlixSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetFlixSTests.m; sourceTree = "<group>"; };
+		2CCCD7991ED8A8A100D05E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CCCD79E1ED8A8A100D05E64 /* NetFlixSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetFlixSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CCCD7A21ED8A8A100D05E64 /* NetFlixSUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetFlixSUITests.m; sourceTree = "<group>"; };
+		2CCCD7A41ED8A8A100D05E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CCCD7741ED8A8A100D05E64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCCD7901ED8A8A100D05E64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCCD79B1ED8A8A100D05E64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CCCD76E1ED8A8A100D05E64 = {
+			isa = PBXGroup;
+			children = (
+				2CCCD7791ED8A8A100D05E64 /* NetFlixS */,
+				2CCCD7961ED8A8A100D05E64 /* NetFlixSTests */,
+				2CCCD7A11ED8A8A100D05E64 /* NetFlixSUITests */,
+				2CCCD7781ED8A8A100D05E64 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CCCD7781ED8A8A100D05E64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CCCD7771ED8A8A100D05E64 /* NetFlixS.app */,
+				2CCCD7931ED8A8A100D05E64 /* NetFlixSTests.xctest */,
+				2CCCD79E1ED8A8A100D05E64 /* NetFlixSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CCCD7791ED8A8A100D05E64 /* NetFlixS */ = {
+			isa = PBXGroup;
+			children = (
+				2CCCD77D1ED8A8A100D05E64 /* AppDelegate.h */,
+				2CCCD77E1ED8A8A100D05E64 /* AppDelegate.m */,
+				2CCCD7801ED8A8A100D05E64 /* ViewController.h */,
+				2CCCD7811ED8A8A100D05E64 /* ViewController.m */,
+				2CCCD7831ED8A8A100D05E64 /* Main.storyboard */,
+				2CCCD7891ED8A8A100D05E64 /* Assets.xcassets */,
+				2CCCD78B1ED8A8A100D05E64 /* LaunchScreen.storyboard */,
+				2CCCD78E1ED8A8A100D05E64 /* Info.plist */,
+				2CCCD7861ED8A8A100D05E64 /* NetFlixS.xcdatamodeld */,
+				2CCCD77A1ED8A8A100D05E64 /* Supporting Files */,
+			);
+			path = NetFlixS;
+			sourceTree = "<group>";
+		};
+		2CCCD77A1ED8A8A100D05E64 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2CCCD77B1ED8A8A100D05E64 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2CCCD7961ED8A8A100D05E64 /* NetFlixSTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CCCD7971ED8A8A100D05E64 /* NetFlixSTests.m */,
+				2CCCD7991ED8A8A100D05E64 /* Info.plist */,
+			);
+			path = NetFlixSTests;
+			sourceTree = "<group>";
+		};
+		2CCCD7A11ED8A8A100D05E64 /* NetFlixSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CCCD7A21ED8A8A100D05E64 /* NetFlixSUITests.m */,
+				2CCCD7A41ED8A8A100D05E64 /* Info.plist */,
+			);
+			path = NetFlixSUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CCCD7761ED8A8A100D05E64 /* NetFlixS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CCCD7A71ED8A8A100D05E64 /* Build configuration list for PBXNativeTarget "NetFlixS" */;
+			buildPhases = (
+				2CCCD7731ED8A8A100D05E64 /* Sources */,
+				2CCCD7741ED8A8A100D05E64 /* Frameworks */,
+				2CCCD7751ED8A8A100D05E64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetFlixS;
+			productName = NetFlixS;
+			productReference = 2CCCD7771ED8A8A100D05E64 /* NetFlixS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CCCD7921ED8A8A100D05E64 /* NetFlixSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CCCD7AA1ED8A8A100D05E64 /* Build configuration list for PBXNativeTarget "NetFlixSTests" */;
+			buildPhases = (
+				2CCCD78F1ED8A8A100D05E64 /* Sources */,
+				2CCCD7901ED8A8A100D05E64 /* Frameworks */,
+				2CCCD7911ED8A8A100D05E64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CCCD7951ED8A8A100D05E64 /* PBXTargetDependency */,
+			);
+			name = NetFlixSTests;
+			productName = NetFlixSTests;
+			productReference = 2CCCD7931ED8A8A100D05E64 /* NetFlixSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CCCD79D1ED8A8A100D05E64 /* NetFlixSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CCCD7AD1ED8A8A100D05E64 /* Build configuration list for PBXNativeTarget "NetFlixSUITests" */;
+			buildPhases = (
+				2CCCD79A1ED8A8A100D05E64 /* Sources */,
+				2CCCD79B1ED8A8A100D05E64 /* Frameworks */,
+				2CCCD79C1ED8A8A100D05E64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CCCD7A01ED8A8A100D05E64 /* PBXTargetDependency */,
+			);
+			name = NetFlixSUITests;
+			productName = NetFlixSUITests;
+			productReference = 2CCCD79E1ED8A8A100D05E64 /* NetFlixSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CCCD76F1ED8A8A100D05E64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "TEJASWINI SUBRAVETI";
+				TargetAttributes = {
+					2CCCD7761ED8A8A100D05E64 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KFV9K9A29B;
+						ProvisioningStyle = Automatic;
+					};
+					2CCCD7921ED8A8A100D05E64 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KFV9K9A29B;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2CCCD7761ED8A8A100D05E64;
+					};
+					2CCCD79D1ED8A8A100D05E64 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = KFV9K9A29B;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2CCCD7761ED8A8A100D05E64;
+					};
+				};
+			};
+			buildConfigurationList = 2CCCD7721ED8A8A100D05E64 /* Build configuration list for PBXProject "NetFlixS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CCCD76E1ED8A8A100D05E64;
+			productRefGroup = 2CCCD7781ED8A8A100D05E64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CCCD7761ED8A8A100D05E64 /* NetFlixS */,
+				2CCCD7921ED8A8A100D05E64 /* NetFlixSTests */,
+				2CCCD79D1ED8A8A100D05E64 /* NetFlixSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CCCD7751ED8A8A100D05E64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCCD78D1ED8A8A100D05E64 /* LaunchScreen.storyboard in Resources */,
+				2CCCD78A1ED8A8A100D05E64 /* Assets.xcassets in Resources */,
+				2CCCD7851ED8A8A100D05E64 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCCD7911ED8A8A100D05E64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCCD79C1ED8A8A100D05E64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CCCD7731ED8A8A100D05E64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCCD7821ED8A8A100D05E64 /* ViewController.m in Sources */,
+				2CCCD77F1ED8A8A100D05E64 /* AppDelegate.m in Sources */,
+				2CCCD7881ED8A8A100D05E64 /* NetFlixS.xcdatamodeld in Sources */,
+				2CCCD77C1ED8A8A100D05E64 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCCD78F1ED8A8A100D05E64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCCD7981ED8A8A100D05E64 /* NetFlixSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CCCD79A1ED8A8A100D05E64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CCCD7A31ED8A8A100D05E64 /* NetFlixSUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CCCD7951ED8A8A100D05E64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CCCD7761ED8A8A100D05E64 /* NetFlixS */;
+			targetProxy = 2CCCD7941ED8A8A100D05E64 /* PBXContainerItemProxy */;
+		};
+		2CCCD7A01ED8A8A100D05E64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CCCD7761ED8A8A100D05E64 /* NetFlixS */;
+			targetProxy = 2CCCD79F1ED8A8A100D05E64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CCCD7831ED8A8A100D05E64 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CCCD7841ED8A8A100D05E64 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2CCCD78B1ED8A8A100D05E64 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CCCD78C1ED8A8A100D05E64 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CCCD7A51ED8A8A100D05E64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		2CCCD7A61ED8A8A100D05E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2CCCD7A81ED8A8A100D05E64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KFV9K9A29B;
+				INFOPLIST_FILE = NetFlixS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sastruga.NetFlixS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CCCD7A91ED8A8A100D05E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = KFV9K9A29B;
+				INFOPLIST_FILE = NetFlixS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sastruga.NetFlixS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CCCD7AB1ED8A8A100D05E64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KFV9K9A29B;
+				INFOPLIST_FILE = NetFlixSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sastruga.NetFlixSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetFlixS.app/NetFlixS";
+			};
+			name = Debug;
+		};
+		2CCCD7AC1ED8A8A100D05E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = KFV9K9A29B;
+				INFOPLIST_FILE = NetFlixSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sastruga.NetFlixSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetFlixS.app/NetFlixS";
+			};
+			name = Release;
+		};
+		2CCCD7AE1ED8A8A100D05E64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = KFV9K9A29B;
+				INFOPLIST_FILE = NetFlixSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sastruga.NetFlixSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NetFlixS;
+			};
+			name = Debug;
+		};
+		2CCCD7AF1ED8A8A100D05E64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = KFV9K9A29B;
+				INFOPLIST_FILE = NetFlixSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = sastruga.NetFlixSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = NetFlixS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CCCD7721ED8A8A100D05E64 /* Build configuration list for PBXProject "NetFlixS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CCCD7A51ED8A8A100D05E64 /* Debug */,
+				2CCCD7A61ED8A8A100D05E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CCCD7A71ED8A8A100D05E64 /* Build configuration list for PBXNativeTarget "NetFlixS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CCCD7A81ED8A8A100D05E64 /* Debug */,
+				2CCCD7A91ED8A8A100D05E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CCCD7AA1ED8A8A100D05E64 /* Build configuration list for PBXNativeTarget "NetFlixSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CCCD7AB1ED8A8A100D05E64 /* Debug */,
+				2CCCD7AC1ED8A8A100D05E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CCCD7AD1ED8A8A100D05E64 /* Build configuration list for PBXNativeTarget "NetFlixSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CCCD7AE1ED8A8A100D05E64 /* Debug */,
+				2CCCD7AF1ED8A8A100D05E64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2CCCD7861ED8A8A100D05E64 /* NetFlixS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CCCD7871ED8A8A100D05E64 /* NetFlixS.xcdatamodel */,
+			);
+			currentVersion = 2CCCD7871ED8A8A100D05E64 /* NetFlixS.xcdatamodel */;
+			path = NetFlixS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2CCCD76F1ED8A8A100D05E64 /* Project object */;
+}
