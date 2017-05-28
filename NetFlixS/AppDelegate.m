@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "NSArray+Utilities.h"
 
 @interface AppDelegate ()
 
