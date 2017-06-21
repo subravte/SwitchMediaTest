@@ -11,7 +11,6 @@
 @interface ViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) UITableView *tableView;
-@property (strong, nonatomic) NSArray *categoryArray;
 
 @end
 

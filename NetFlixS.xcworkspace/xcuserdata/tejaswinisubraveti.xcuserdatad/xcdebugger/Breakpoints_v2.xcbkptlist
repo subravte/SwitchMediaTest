@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetFlixS/NFWebService.m"
-            timestampString = "517766675.245707"
+            timestampString = "519710072.339624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60">
+            startingLineNumber = "61"
+            endingLineNumber = "61">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -72,41 +72,137 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetFlixS/NFWebService.m"
-            timestampString = "517766730.929928"
+            timestampString = "519710072.339624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62">
+            startingLineNumber = "63"
+            endingLineNumber = "63">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetFlixS/ViewController.m"
-            timestampString = "519702423.751707"
+            timestampString = "519715562.026567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "-numberOfSectionsInTableView:"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "-startImageURLDownloadForCollectionViewItemIndexPath:andCollectionViewIndexPath:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController startImageURLDownloadForCollectionViewItemIndexPath:andCollectionViewIndexPath:]"
+                  moduleName = "NetFlixS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaswinisubraveti/Desktop/Projects/NetFlixS/NetFlixS/ViewController.m"
+                  timestampString = "519714069.419358"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__97-[ViewController startImageURLDownloadForCollectionViewItemIndexPath:andCollectionViewIndexPath:]_block_invoke"
+                  moduleName = "NetFlixS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tejaswinisubraveti/Desktop/Projects/NetFlixS/NetFlixS/ViewController.m"
+                  timestampString = "519714069.420845"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetFlixS/ViewController.m"
+            timestampString = "519715562.026567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "-startImageURLDownloadForCollectionViewItemIndexPath:andCollectionViewIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetFlixS/ViewController.m"
-            timestampString = "519704570.748184"
+            timestampString = "519715562.026567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
+            startingLineNumber = "193"
+            endingLineNumber = "193"
+            landmarkName = "-setImageTitleLabel:ForCollectionViewItemIndexPath:andCollectionViewIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetFlixS/ViewController.m"
+            timestampString = "519715562.026567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
+            landmarkName = "-startIconDownload:ForCollectionViewItemIndexPath:andCollectionViewIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetFlixS/ViewController.m"
+            timestampString = "519715562.026567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "-startIconDownload:ForCollectionViewItemIndexPath:andCollectionViewIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NetFlixS/ViewController.m"
+            timestampString = "519715562.026567"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -114,16 +210,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NetFlixS/MyDataManager.m"
-            timestampString = "519696849.022953"
+            filePath = "NetFlixS/ViewController.m"
+            timestampString = "519715562.026567"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "-categoryTitlesCount"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "-saveImageRecord:ForCollectionViewItemIndexPath:andCollectionViewIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -134,12 +230,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NetFlixS/ViewController.m"
-            timestampString = "519703115.244506"
+            timestampString = "519716005.684778"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "-tableView:willDisplayCell:forRowAtIndexPath:"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "-startIconDownload:ForCollectionViewItemIndexPath:andCollectionViewIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

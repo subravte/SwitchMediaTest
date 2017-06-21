@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2C3ABA791EF9EB6B00BDDC9B /* MyDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ABA781EF9EB6B00BDDC9B /* MyDataManager.m */; };
+		2C3ABA801EFA195A00BDDC9B /* IconDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ABA7F1EFA195A00BDDC9B /* IconDownloader.m */; };
+		2C3ABA831EFA19B100BDDC9B /* ImageRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ABA821EFA19B100BDDC9B /* ImageRecord.m */; };
 		2CCCD77C1ED8A8A100D05E64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD77B1ED8A8A100D05E64 /* main.m */; };
 		2CCCD77F1ED8A8A100D05E64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD77E1ED8A8A100D05E64 /* AppDelegate.m */; };
 		2CCCD7821ED8A8A100D05E64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD7811ED8A8A100D05E64 /* ViewController.m */; };
@@ -50,6 +52,10 @@
 		16AD4E7DF714C5ACBF7F313F /* Pods-NetFlixS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetFlixS.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetFlixS/Pods-NetFlixS.release.xcconfig"; sourceTree = "<group>"; };
 		2C3ABA771EF9EB6B00BDDC9B /* MyDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataManager.h; sourceTree = "<group>"; };
 		2C3ABA781EF9EB6B00BDDC9B /* MyDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataManager.m; sourceTree = "<group>"; };
+		2C3ABA7E1EFA195A00BDDC9B /* IconDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconDownloader.h; sourceTree = "<group>"; };
+		2C3ABA7F1EFA195A00BDDC9B /* IconDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconDownloader.m; sourceTree = "<group>"; };
+		2C3ABA811EFA19B100BDDC9B /* ImageRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageRecord.h; sourceTree = "<group>"; };
+		2C3ABA821EFA19B100BDDC9B /* ImageRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageRecord.m; sourceTree = "<group>"; };
 		2CCCD7771ED8A8A100D05E64 /* NetFlixS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetFlixS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCCD77B1ED8A8A100D05E64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CCCD77D1ED8A8A100D05E64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +158,10 @@
 				2C3ABA781EF9EB6B00BDDC9B /* MyDataManager.m */,
 				2CE870911EDA2EA4006DF7F0 /* XMLDictionary.h */,
 				2CE870921EDA2EA4006DF7F0 /* XMLDictionary.m */,
+				2C3ABA7E1EFA195A00BDDC9B /* IconDownloader.h */,
+				2C3ABA7F1EFA195A00BDDC9B /* IconDownloader.m */,
+				2C3ABA811EFA19B100BDDC9B /* ImageRecord.h */,
+				2C3ABA821EFA19B100BDDC9B /* ImageRecord.m */,
 			);
 			name = DataManager;
 			sourceTree = "<group>";
@@ -543,8 +553,10 @@
 				2CCCD7B81ED8ADBF00D05E64 /* NSArray+Utilities.m in Sources */,
 				2CCCD77F1ED8A8A100D05E64 /* AppDelegate.m in Sources */,
 				2CE870931EDA2EA4006DF7F0 /* XMLDictionary.m in Sources */,
+				2C3ABA801EFA195A00BDDC9B /* IconDownloader.m in Sources */,
 				2CCCD7881ED8A8A100D05E64 /* NetFlixS.xcdatamodeld in Sources */,
 				2CCCD7B51ED8AD0900D05E64 /* UIColor+Utilities.m in Sources */,
+				2C3ABA831EFA19B100BDDC9B /* ImageRecord.m in Sources */,
 				2CE870981EDB5A0E006DF7F0 /* NFWebService.m in Sources */,
 				2CCCD77C1ED8A8A100D05E64 /* main.m in Sources */,
 			);

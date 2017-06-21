@@ -7,7 +7,7 @@
 //
 
 #import "MyDataManager.h"
-
+#import "XMLDictionary.h"
 @implementation MyDataManager
 
 + (instancetype)sharedInstance
@@ -21,8 +21,8 @@
     return sharedInstance;
 }
 
-+(NSArray *) dataArray {
-    return [MyDataManager sharedInstance].dataArray;
++(NSMutableArray *) dataArray {
+    return [[MyDataManager sharedInstance].dataArray mutableCopy];
 }
 
 +(NSArray *) categoryTitlesArray {

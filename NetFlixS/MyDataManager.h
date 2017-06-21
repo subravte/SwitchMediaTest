@@ -12,10 +12,13 @@
 @interface MyDataManager : NSObject
 
 + (instancetype)sharedInstance;
-@property (nonatomic, retain) NSArray *dataArray;
+@property (nonatomic, retain) NSMutableArray *dataArray;
+@property (nonatomic, retain) NSMutableArray *imagesArray;
+
 @property (nonatomic, retain) NSArray *categoryTitlesArray;
 
 - (void)initialiseDataArrayWithColors;
+- (void)initialiseImagesAPI;
 - (void)initialiseCategoryTitlesArrayWithColors;
 -(NSString *)categoryTitleAtIndex:(NSInteger)anIndex;
 -(NSInteger)categoryTitlesCount;
