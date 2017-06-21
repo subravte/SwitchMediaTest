@@ -7,7 +7,7 @@
 //
 
 #import "NSArray+Utilities.h"
-#import "UIColor+Utilities.h"z
+#import "UIColor+Utilities.h"
 @implementation NSArray (Utilities)
 
 +(NSArray *)generateRandomData{

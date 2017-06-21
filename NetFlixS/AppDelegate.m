@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NSArray+Utilities.h"
+#import "MyDataManager.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //initialise dataArrayWithColors
+    [[MyDataManager sharedInstance] initialiseDataArrayWithColors];
     return YES;
 }
 

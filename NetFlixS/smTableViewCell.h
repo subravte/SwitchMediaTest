@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface smTableViewCell : UITableViewCell 
-@property (strong, nonatomic ) UICollectionView *collectionView;
+@interface smCollectionView : UICollectionView
 
-- (void)setDataSourceDelegate:(id)view withTag:(NSInteger)rowID;
+@property (nonatomic, strong) NSIndexPath *indexPath;
+
+@end
+
+static NSString *CollectionViewCellIdentifier = @"categoryItemReuseIdentifier";
+
+@interface smTableViewCell : UITableViewCell
+
+@property (strong, nonatomic ) smCollectionView *collectionView;
+
+- (void)setCollectionViewDataSourceDelegate:(id<UICollectionViewDataSource, UICollectionViewDelegate>)dataSourceDelegate indexPath:(NSIndexPath *)indexPath;
+
 @end
