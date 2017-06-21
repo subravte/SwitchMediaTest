@@ -49,7 +49,7 @@
     self.tableView.userInteractionEnabled = YES;
     self.tableView.bounces = YES;
     self.tableView.sectionIndexColor = [UIColor whiteColor];
-    self.tableView.backgroundColor = [UIColor orangeColor];
+    self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -111,14 +111,16 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"categoryItemReuseIdentifier" forIndexPath:indexPath];
+    smCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"categoryItemReuseIdentifier" forIndexPath:indexPath];
 //    [cell prepareForReuse];
 //    if (cell == nil){
 //        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0, 0, 180, 180)];
 //    }
     NSMutableArray *tempCategoryItemArray = [self.categoryArray objectAtIndex:[(smCollectionView *)collectionView indexPath].section];
-    cell.backgroundColor = [tempCategoryItemArray objectAtIndex:indexPath.row];
-
+    cell.categoryItemImageView.backgroundColor = [tempCategoryItemArray objectAtIndex:indexPath.row];
+    cell.categoryItemImageView.image = [UIImage imageNamed:@"placeholder.png"];
+    cell.categoryItemTitleLabel.text = @"text";
+    cell.categoryItemTitleLabel.backgroundColor = [tempCategoryItemArray objectAtIndex:indexPath.row];
     return cell;
 }
 

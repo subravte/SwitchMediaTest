@@ -22,8 +22,8 @@
         layout.itemSize = CGSizeMake(190, 190);
         self.collectionView=[[smCollectionView alloc] initWithFrame:CGRectZero
                                                collectionViewLayout:layout];
-        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CollectionViewCellIdentifier];
-        [self.collectionView setBackgroundColor:[UIColor greenColor]];
+        [self.collectionView registerClass:[smCollectionViewCell class] forCellWithReuseIdentifier:CollectionViewCellIdentifier];
+        [self.collectionView setBackgroundColor:[UIColor clearColor]];
         self.collectionView.showsHorizontalScrollIndicator = NO;
         [self.contentView addSubview:self.collectionView];
     }

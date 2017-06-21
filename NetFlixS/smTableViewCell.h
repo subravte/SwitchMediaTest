@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "smCollectionViewCell.h"
 
 @interface smCollectionView : UICollectionView
 
