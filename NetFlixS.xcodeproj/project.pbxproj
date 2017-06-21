@@ -25,7 +25,6 @@
 		2CCCD7BE1ED8BD6B00D05E64 /* smCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD7BD1ED8BD6B00D05E64 /* smCollectionViewCell.m */; };
 		2CE8708B1EDA1EBD006DF7F0 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CE8708A1EDA1EBD006DF7F0 /* placeholder.png */; };
 		2CE870931EDA2EA4006DF7F0 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE870921EDA2EA4006DF7F0 /* XMLDictionary.m */; };
-		2CE870981EDB5A0E006DF7F0 /* NFWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE870971EDB5A0E006DF7F0 /* NFWebService.m */; };
 		5B0675A1EF20E07C3EF6196D /* libPods-NetFlixSUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BD2310FCD9CBA913B8A01E /* libPods-NetFlixSUITests.a */; };
 		700975609498783287407512 /* libPods-NetFlixS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC426F8B46615E312A32D03 /* libPods-NetFlixS.a */; };
 		D5C9E5CB5D065951AE0C5BE5 /* libPods-NetFlixSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2CBDC3D00F57F63C5E8AB4D /* libPods-NetFlixSTests.a */; };
@@ -84,8 +83,6 @@
 		2CE8708A1EDA1EBD006DF7F0 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = placeholder.png; path = Images/placeholder.png; sourceTree = "<group>"; };
 		2CE870911EDA2EA4006DF7F0 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
 		2CE870921EDA2EA4006DF7F0 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
-		2CE870961EDB5A0E006DF7F0 /* NFWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NFWebService.h; sourceTree = "<group>"; };
-		2CE870971EDB5A0E006DF7F0 /* NFWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NFWebService.m; sourceTree = "<group>"; };
 		2ED8AABE34B42AFE0A3BFAA8 /* Pods-NetFlixSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetFlixSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetFlixSUITests/Pods-NetFlixSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		55BD2310FCD9CBA913B8A01E /* libPods-NetFlixSUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetFlixSUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CC426F8B46615E312A32D03 /* libPods-NetFlixS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NetFlixS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,8 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				2CCCD7861ED8A8A100D05E64 /* NetFlixS.xcdatamodeld */,
-				2CE870961EDB5A0E006DF7F0 /* NFWebService.h */,
-				2CE870971EDB5A0E006DF7F0 /* NFWebService.m */,
 				2C3ABA771EF9EB6B00BDDC9B /* MyDataManager.h */,
 				2C3ABA781EF9EB6B00BDDC9B /* MyDataManager.m */,
 				2CE870911EDA2EA4006DF7F0 /* XMLDictionary.h */,
@@ -557,7 +552,6 @@
 				2CCCD7881ED8A8A100D05E64 /* NetFlixS.xcdatamodeld in Sources */,
 				2CCCD7B51ED8AD0900D05E64 /* UIColor+Utilities.m in Sources */,
 				2C3ABA831EFA19B100BDDC9B /* ImageRecord.m in Sources */,
-				2CE870981EDB5A0E006DF7F0 /* NFWebService.m in Sources */,
 				2CCCD77C1ED8A8A100D05E64 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

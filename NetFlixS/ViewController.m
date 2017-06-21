@@ -10,17 +10,14 @@
 #import "NSArray+Utilities.h"
 #import "smTableViewCell.h"
 #import "AFNetworking.h"
-#import "XMLDictionary.h"
-#import "NFWebService.h"
 #import "MyDataManager.h"
 #import "IconDownloader.h"
 #import "ImageRecord.h"
+#import "XMLDictionary.h"
 
 @interface ViewController ()
 
-@property (nonatomic, retain) NFWebService *shared;
 @property (nonatomic, strong) NSMutableDictionary *contentOffsetDictionary;
-
 @property (nonatomic, strong) NSMutableDictionary *imageDownloadsInProgress;
 
 
@@ -190,7 +187,7 @@
 - (void)setImageTitleLabel:(ImageRecord *)imageRecord ForCollectionViewItemIndexPath:(NSIndexPath*)collectionViewItemIndexPath andCollectionViewIndexPath:(NSIndexPath*)collectionViewIndexPath{
     smCollectionViewCell *cell = [self collectionViewCellForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
     cell.categoryItemTitleLabel.text = [imageRecord imageName];
-    [cell reloadInputViews];
+    [cell.categoryItemTitleLabel reloadInputViews];
 }
 
 - (void)saveImageRecord:(ImageRecord *)imageRecord ForCollectionViewItemIndexPath:(NSIndexPath*)collectionViewItemIndexPath andCollectionViewIndexPath:(NSIndexPath*)collectionViewIndexPath{
@@ -205,7 +202,6 @@
         ImageRecord *imageRecord =[[ImageRecord alloc]init];
         imageRecord.imageURLString = imageURLString;
         [self setImageTitleLabel:imageRecord ForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
-        [self saveImageRecord:imageRecord ForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
         [self startIconDownload:imageRecord ForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
     }] resume];
 }
@@ -227,6 +223,8 @@
             
             // Display the newly loaded image
             cell.categoryItemImageView.image = imageRecord.imageIcon;
+            cell.categoryItemTitleLabel.text = [imageRecord imageName];
+            [cell reloadInputViews];
             [self saveImageRecord:imageRecord ForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
             
             // Remove the IconDownloader from the in progress list.

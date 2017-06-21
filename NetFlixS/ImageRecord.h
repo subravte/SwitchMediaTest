@@ -11,9 +11,7 @@
 #import <UIKit/UIKit.h>
 @interface ImageRecord : NSObject
 
-@property (nonatomic, retain) NSString *imageName;
 @property (nonatomic, retain) NSString *imageURLString;
-@property (nonatomic, retain) NSString *imageLocation;
 @property (nonatomic, retain) UIImage *imageIcon;
 
 -(NSString *)imageName;
