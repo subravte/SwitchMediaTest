@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FullTileViewController : UIViewController
+
+@protocol FullTileCellDelegate <NSObject>
+
+-(void)fullTileCellWillCollapse;
+
+@end
+
+@interface FullTileViewController : UIViewController 
+@property (weak, nonatomic) IBOutlet UIView *cell;
+@property (weak, nonatomic) IBOutlet UIButton *collapseButton;
+@property (weak,nonatomic) id <FullTileCellDelegate> delegate;
+@property (nonatomic, retain) UILabel *categoryItemTitleLabel;
+@property (nonatomic, retain) UIImageView *categoryItemImageView;
+
 
 @end

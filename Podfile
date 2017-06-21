@@ -7,8 +7,7 @@ target 'NetFlixS' do
   # use_frameworks!
 
   # Pods for NetFlixS
-pod 'AFNetworking', '~> 3.0'
-pod 'Masonry'
+
   target 'NetFlixSTests' do
     inherit! :search_paths
     # Pods for testing

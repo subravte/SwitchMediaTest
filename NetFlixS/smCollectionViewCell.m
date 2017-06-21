@@ -12,9 +12,9 @@
 
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
-    self.categoryItemImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height*2/3)];
+    self.categoryItemImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height*3/4)];
     self.categoryItemImageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.categoryItemTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, self.categoryItemImageView.frame.size.height, frame.size.width, frame.size.height/3)];
+    self.categoryItemTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, self.categoryItemImageView.frame.size.height, frame.size.width, frame.size.height/4)];
     self.categoryItemTitleLabel.textAlignment = NSTextAlignmentCenter;
     [self.contentView addSubview:self.categoryItemImageView];
     [self.contentView addSubview:self.categoryItemTitleLabel];

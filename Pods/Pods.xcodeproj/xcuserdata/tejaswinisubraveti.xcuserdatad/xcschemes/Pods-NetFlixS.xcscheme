@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '931C06976289A815F7EAFE186D5C0EEE'
+               BlueprintIdentifier = '0ECA7BEC3D3E364BB8313DE78DDBC870'
                BlueprintName = 'Pods-NetFlixS'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-NetFlixS.a'>

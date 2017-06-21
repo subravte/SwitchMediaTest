@@ -9,7 +9,6 @@
 #import "ViewController.h"
 #import "NSArray+Utilities.h"
 #import "smTableViewCell.h"
-#import "AFNetworking.h"
 #import "MyDataManager.h"
 #import "IconDownloader.h"
 #import "ImageRecord.h"
@@ -18,8 +17,8 @@
 @interface ViewController ()
 
 @property (nonatomic, strong) NSMutableDictionary *contentOffsetDictionary;
-@property (nonatomic, strong) NSMutableDictionary *imageDownloadsInProgress;
-
+@property (nonatomic, strong) FullTileViewController *fullTile;
+@property (nonatomic) CGRect chosenCellFrame;
 
 @end
 
@@ -28,9 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _imageDownloadsInProgress = [NSMutableDictionary dictionary];
 
-    [self createTableView];
     [self.tableView setNeedsLayout];
     [self.tableView layoutIfNeeded];
 }
@@ -38,9 +35,8 @@
 -(void)loadView
 {
     [super loadView];
-    
+    [self createTableView];
     self.contentOffsetDictionary = [NSMutableDictionary dictionary];
-
 }
 
 - (void)createTableView{
@@ -67,6 +63,7 @@
     [self.tableView reloadData];
 }
 
+#pragma mark TableViewDataSource Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [MyDataManager sharedInstance].categoryTitlesCount;
 }
@@ -105,6 +102,7 @@
     [cell.collectionView setContentOffset:CGPointMake(horizontalOffset, 0)];
 }
 
+#pragma mark CollectionViewDataSource Methods
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -128,17 +126,55 @@
             cell.categoryItemImageView.image = imageRecord.imageIcon;
         }
         else{
-            [self startIconDownload:imageRecord ForCollectionViewItemIndexPath:indexPath andCollectionViewIndexPath:[(smCollectionView *)collectionView indexPath]];
+            [self startIconDownload:imageRecord forCollectionViewItemIndexPath:indexPath andCollectionViewIndexPath:[(smCollectionView *)collectionView indexPath]];
         }
     }
     else{
     cell.categoryItemImageView.backgroundColor = [tempCategoryItemArray objectAtIndex:indexPath.row];
     cell.categoryItemImageView.image = [UIImage imageNamed:@"placeholder.png"];
-    cell.categoryItemTitleLabel.text = @"text";
     cell.categoryItemTitleLabel.backgroundColor = [tempCategoryItemArray objectAtIndex:indexPath.row];
     [self startImageURLDownloadForCollectionViewItemIndexPath:indexPath andCollectionViewIndexPath:[(smCollectionView *)collectionView indexPath]];
     }
     return cell;
+}
+
+#pragma mark - CollectionViewDelegate Methods
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSMutableArray *tempCategoryItemArray = [[MyDataManager sharedInstance].dataArray objectAtIndex:[(smCollectionView *)collectionView indexPath].section];
+    if ([[tempCategoryItemArray objectAtIndex:indexPath.row] isKindOfClass:[ImageRecord class]]) {
+        ImageRecord *imageRecord = (ImageRecord *)[tempCategoryItemArray objectAtIndex:indexPath.row];
+        if (! self.fullTile) {
+            self.fullTile = [self.storyboard instantiateViewControllerWithIdentifier:@"FullTile"];
+            self.fullTile.delegate = self;
+        }
+        [self addChildViewController:self.fullTile];
+        self.fullTile.view.frame = [self.tableView rectForRowAtIndexPath:indexPath];
+        self.fullTile.view.center = CGPointMake(self.fullTile.view.center.x, self.fullTile.view.center.y - self.tableView.contentOffset.y); // adjusts for the offset of the cell when you select it
+        self.chosenCellFrame = self.fullTile.view.frame;
+        self.fullTile.categoryItemImageView.image = imageRecord.imageIcon;
+        self.fullTile.categoryItemTitleLabel.text = [imageRecord imageName];
+        [self.view addSubview:self.fullTile.view];
+        [UIView animateWithDuration:.5 animations:^{
+            self.fullTile.view.frame = self.tableView.frame;
+            self.fullTile.collapseButton.alpha = 1;
+        } completion:^(BOOL finished) {
+            [self.fullTile didMoveToParentViewController:self];
+        }];
+    }
+}
+
+#pragma mark - FullTileCellViewControllerDelegate Methods
+
+-(void)fullTileCellWillCollapse {
+    [self.fullTile willMoveToParentViewController:nil];
+    [UIView animateWithDuration:.5 animations:^{
+        self.fullTile.view.frame = self.chosenCellFrame;
+        self.fullTile.collapseButton.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.fullTile.view removeFromSuperview];
+        [self.fullTile removeFromParentViewController];
+    }];
 }
 
 #pragma mark - UIScrollViewDelegate Methods
@@ -157,23 +193,14 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    [self terminateAllDownloads];
+    [[MyDataManager sharedInstance] terminateAllDownloads];
 
-}
-
-- (void)terminateAllDownloads
-{
-    // terminate all pending download connections
-    NSArray *allDownloads = [self.imageDownloadsInProgress allValues];
-    [allDownloads makeObjectsPerformSelector:@selector(cancelDownload)];
-    
-    [self.imageDownloadsInProgress removeAllObjects];
 }
 
 - (void)dealloc
 {
     // terminate all pending download connections
-    [self terminateAllDownloads];
+    [[MyDataManager sharedInstance] terminateAllDownloads];
 }
 
 #pragma mark - Table cell image support
@@ -184,57 +211,33 @@
     return collectionViewCell;
 }
 
-- (void)setImageTitleLabel:(ImageRecord *)imageRecord ForCollectionViewItemIndexPath:(NSIndexPath*)collectionViewItemIndexPath andCollectionViewIndexPath:(NSIndexPath*)collectionViewIndexPath{
+- (void)setImageRecord:(ImageRecord *)imageRecord forCollectionViewItemIndexPath:(NSIndexPath*)collectionViewItemIndexPath andCollectionViewIndexPath:(NSIndexPath*)collectionViewIndexPath{
     smCollectionViewCell *cell = [self collectionViewCellForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
     cell.categoryItemTitleLabel.text = [imageRecord imageName];
-    [cell.categoryItemTitleLabel reloadInputViews];
+    if (imageRecord.imageIcon!=nil) {
+        cell.categoryItemImageView.image = imageRecord.imageIcon;
+    }
+    [cell layoutIfNeeded];
+    [cell setNeedsLayout];
 }
 
-- (void)saveImageRecord:(ImageRecord *)imageRecord ForCollectionViewItemIndexPath:(NSIndexPath*)collectionViewItemIndexPath andCollectionViewIndexPath:(NSIndexPath*)collectionViewIndexPath{
-    NSMutableArray *tempCategoryItemArray = [[MyDataManager sharedInstance].dataArray objectAtIndex:collectionViewIndexPath.section];
-    [tempCategoryItemArray replaceObjectAtIndex:collectionViewItemIndexPath.row withObject:imageRecord];
-    [[MyDataManager sharedInstance].dataArray replaceObjectAtIndex:collectionViewIndexPath.section withObject:tempCategoryItemArray];
-}
+
 
 - (void)startImageURLDownloadForCollectionViewItemIndexPath:(NSIndexPath*)collectionViewItemIndexPath andCollectionViewIndexPath:(NSIndexPath*)collectionViewIndexPath{
-    [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:@"http://www.colourlovers.com/api/patterns/random"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        NSString *imageURLString = [[[NSDictionary dictionaryWithXMLData:data] objectForKey:@"pattern"] objectForKey:@"imageUrl"];
-        ImageRecord *imageRecord =[[ImageRecord alloc]init];
-        imageRecord.imageURLString = imageURLString;
-        [self setImageTitleLabel:imageRecord ForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
-        [self startIconDownload:imageRecord ForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
-    }] resume];
+    [[MyDataManager sharedInstance] startImageURLDownloadForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath completion:^(NSIndexPath *collectionViewItemIndexPath, NSIndexPath *collectionViewIndexPath, ImageRecord *imageRecord) {
+        [self setImageRecord:imageRecord forCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
+    }];
 }
 
-// -------------------------------------------------------------------------------
-//	startIconDownload:forIndexPath:
-// -------------------------------------------------------------------------------
-- (void)startIconDownload:(ImageRecord *)imageRecord ForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath
+- (void)startIconDownload:(ImageRecord *)imageRecord
+        forCollectionViewItemIndexPath:(NSIndexPath *)collectionViewItemIndexPath
+            andCollectionViewIndexPath:(NSIndexPath *)collectionViewIndexPath
 {
-    NSString *indexPath = [NSString stringWithFormat:@"%@-%@", collectionViewIndexPath, collectionViewItemIndexPath];
-    IconDownloader *iconDownloader = (self.imageDownloadsInProgress)[indexPath];
-    if (iconDownloader == nil)
-    {
-        iconDownloader = [[IconDownloader alloc] init];
-        iconDownloader.imageRecord = imageRecord;
-        [iconDownloader setCompletionHandler:^{
-            
-            smCollectionViewCell *cell = [self collectionViewCellForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
-            
-            // Display the newly loaded image
-            cell.categoryItemImageView.image = imageRecord.imageIcon;
-            cell.categoryItemTitleLabel.text = [imageRecord imageName];
-            [cell reloadInputViews];
-            [self saveImageRecord:imageRecord ForCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
-            
-            // Remove the IconDownloader from the in progress list.
-            // This will result in it being deallocated.
-            [self.imageDownloadsInProgress removeObjectForKey:indexPath];
-            
-        }];
-        (self.imageDownloadsInProgress)[indexPath] = iconDownloader;
-        [iconDownloader startDownload];
-    }
+    
+    [[MyDataManager sharedInstance] startIconDownload:imageRecord forCollectionViewItemIndexPath:collectionViewItemIndexPath
+andCollectionViewIndexPath:collectionViewIndexPath completion:^(NSIndexPath *collectionViewItemIndexPath, NSIndexPath *collectionViewIndexPath, ImageRecord *imageRecord) {
+    [self setImageRecord:imageRecord forCollectionViewItemIndexPath:collectionViewItemIndexPath andCollectionViewIndexPath:collectionViewIndexPath];
+}];
 }
 
 @end

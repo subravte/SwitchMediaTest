@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NSArray+Utilities.h"
+#import "ImageRecord.h"
 
 @interface MyDataManager : NSObject
 
@@ -18,9 +19,15 @@
 @property (nonatomic, retain) NSArray *categoryTitlesArray;
 
 - (void)initialiseDataArrayWithColors;
-- (void)initialiseImagesAPI;
 - (void)initialiseCategoryTitlesArrayWithColors;
--(NSString *)categoryTitleAtIndex:(NSInteger)anIndex;
--(NSInteger)categoryTitlesCount;
+- (NSString *)categoryTitleAtIndex:(NSInteger)anIndex;
+- (NSInteger)categoryTitlesCount;
 
+- (void)startIconDownload:(ImageRecord *)imageRecord
+    forCollectionViewItemIndexPath:(NSIndexPath *)collectionViewItemIndexPath
+        andCollectionViewIndexPath:(NSIndexPath *)collectionViewIndexPath
+                        completion:(void (^)(NSIndexPath *collectionViewItemIndexPath, NSIndexPath *collectionViewIndexPath,  ImageRecord *imageRecord))completionBlock;
+
+- (void)startImageURLDownloadForCollectionViewItemIndexPath:(NSIndexPath*)collectionViewItemIndexPath andCollectionViewIndexPath:(NSIndexPath*)collectionViewIndexPath  completion:(void (^)(NSIndexPath *collectionViewItemIndexPath, NSIndexPath *collectionViewIndexPath,  ImageRecord *imageRecord))completionBlock;
+- (void)terminateAllDownloads;
 @end

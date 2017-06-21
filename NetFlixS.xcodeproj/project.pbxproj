@@ -10,6 +10,7 @@
 		2C3ABA791EF9EB6B00BDDC9B /* MyDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ABA781EF9EB6B00BDDC9B /* MyDataManager.m */; };
 		2C3ABA801EFA195A00BDDC9B /* IconDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ABA7F1EFA195A00BDDC9B /* IconDownloader.m */; };
 		2C3ABA831EFA19B100BDDC9B /* ImageRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ABA821EFA19B100BDDC9B /* ImageRecord.m */; };
+		2C3ABA891EFAEDD900BDDC9B /* FullTileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3ABA881EFAEDD900BDDC9B /* FullTileViewController.m */; };
 		2CCCD77C1ED8A8A100D05E64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD77B1ED8A8A100D05E64 /* main.m */; };
 		2CCCD77F1ED8A8A100D05E64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD77E1ED8A8A100D05E64 /* AppDelegate.m */; };
 		2CCCD7821ED8A8A100D05E64 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CCCD7811ED8A8A100D05E64 /* ViewController.m */; };
@@ -55,6 +56,8 @@
 		2C3ABA7F1EFA195A00BDDC9B /* IconDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IconDownloader.m; sourceTree = "<group>"; };
 		2C3ABA811EFA19B100BDDC9B /* ImageRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageRecord.h; sourceTree = "<group>"; };
 		2C3ABA821EFA19B100BDDC9B /* ImageRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageRecord.m; sourceTree = "<group>"; };
+		2C3ABA871EFAEDD900BDDC9B /* FullTileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullTileViewController.h; sourceTree = "<group>"; };
+		2C3ABA881EFAEDD900BDDC9B /* FullTileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullTileViewController.m; sourceTree = "<group>"; };
 		2CCCD7771ED8A8A100D05E64 /* NetFlixS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetFlixS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CCCD77B1ED8A8A100D05E64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2CCCD77D1ED8A8A100D05E64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				2CCCD7891ED8A8A100D05E64 /* Assets.xcassets */,
 				2CCCD78B1ED8A8A100D05E64 /* LaunchScreen.storyboard */,
 				2CCCD78E1ED8A8A100D05E64 /* Info.plist */,
+				2C3ABA871EFAEDD900BDDC9B /* FullTileViewController.h */,
+				2C3ABA881EFAEDD900BDDC9B /* FullTileViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -550,6 +555,7 @@
 				2CE870931EDA2EA4006DF7F0 /* XMLDictionary.m in Sources */,
 				2C3ABA801EFA195A00BDDC9B /* IconDownloader.m in Sources */,
 				2CCCD7881ED8A8A100D05E64 /* NetFlixS.xcdatamodeld in Sources */,
+				2C3ABA891EFAEDD900BDDC9B /* FullTileViewController.m in Sources */,
 				2CCCD7B51ED8AD0900D05E64 /* UIColor+Utilities.m in Sources */,
 				2C3ABA831EFA19B100BDDC9B /* ImageRecord.m in Sources */,
 				2CCCD77C1ED8A8A100D05E64 /* main.m in Sources */,
