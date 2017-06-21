@@ -50,7 +50,7 @@
     _imageRecordsCollection = [NSMutableDictionary dictionary];
     
     [self initialiseCategoryTitlesArrayWithColors];
-    self.dataArray = [NSArray generateRandomData];
+    self.dataArray = [[NSArray generateRandomData] mutableCopy];
 }
 
 - (void)initialiseCategoryTitlesArrayWithColors{
